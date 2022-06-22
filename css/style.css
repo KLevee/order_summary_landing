@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  background: url(/images/pattern-background-desktop.svg) top no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  background-color: #e0e8ff;
+  max-width: 1440px;
+}
+
+.card {
+  border: none;
+  border-radius: 1.5rem;
+  background-color: white;
+  max-width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 20px 25px #9aacdb;
+}
+
+@media (max-width: 375px) {
+  .card {
+    max-width: 320px;
+  }
+}
+
+.card .hero {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.card main h1 {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 15px;
+  color: #1f2f56;
+  font-size: 25px;
+}
+
+.card main p {
+  text-align: center;
+  padding: 0 4rem;
+  color: #7280a7;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 375px) {
+  .card main p {
+    padding: 0 2rem;
+  }
+}
+
+.card main .price {
+  text-align: left;
+  padding: 0;
+}
+
+.card main .subscription {
+  display: flex;
+  background-color: #f5f7ff;
+  border: none;
+  border-radius: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 3rem;
+  padding: 20px 25px;
+}
+
+@media (max-width: 375px) {
+  .card main .subscription {
+    margin: 1.5rem 1.5rem;
+    padding: 20px 15px;
+  }
+}
+
+.card main .left {
+  display: flex;
+  align-items: center;
+}
+
+.card main .left img {
+  width: 47px;
+}
+
+.card main .description {
+  padding-left: 20px;
+}
+
+@media (max-width: 375px) {
+  .card main .description {
+    padding-left: 17px;
+  }
+}
+
+.card main h2 {
+  color: #1f2f56;
+  font-size: 15px;
+  padding-bottom: 2px;
+}
+
+.card main a {
+  color: #3829e0;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transform: all 0.2s ease;
+}
+
+.card main a:hover {
+  color: #766cea;
+  text-decoration: none;
+}
+
+@media (max-width: 375px) {
+  .card main a {
+    font-size: 13px;
+  }
+}
+
+.card main button {
+  display: block;
+  border: none;
+  border-radius: 12px;
+  margin: 0 3rem;
+  padding: 1rem;
+  width: 85%;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .card main button {
+    margin: 0 1.5rem;
+    font-size: 14px;
+  }
+}
+
+.card main .payment {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background-color: #3829e0;
+  color: #f5f7ff;
+  font-weight: 900;
+  box-shadow: 0px 15px 40px #9aacdb;
+  position: relative;
+  z-index: 999;
+}
+
+.card main .payment:hover {
+  transform: all 3s ease;
+  background-color: #766cea;
+}
+
+@media (max-width: 375px) {
+  .card main .payment {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.card main .cancel {
+  background-color: white;
+  color: #7280a7;
+  margin-bottom: 1.5rem;
+  transform: all 0.5s ease;
+  font-weight: 700;
+}
+
+.card main .cancel:hover {
+  color: #1f2f56;
+}
+
+@media (max-width: 375px) {
+  .card main .cancel {
+    margin-bottom: 1rem;
+  }
+}

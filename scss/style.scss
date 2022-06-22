@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import 'colors';
+@import 'media';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    background: url(/images/pattern-background-desktop.svg) top no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    background-color: $Paleblue;
+    max-width: 1440px;
+}
+
+.card {
+    border: none;
+    border-radius: 1.5rem;
+    background-color: white;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 20px 25px lighten($Darkblue, 50%);
+
+    @include mobile{
+        max-width: 320px;
+    }
+
+    .hero {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+
+    main {
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 15px;
+            color: $Darkblue;
+            font-size: 25px;
+        }
+
+        p {
+            text-align: center;
+            padding: 0 4rem;
+            color: $Desaturatedblue;
+            font-size: 15px;
+            line-height: 1.6;
+
+            @include mobile{
+                padding: 0 2rem;
+            }
+        }
+
+        .price {
+            text-align: left;
+            padding: 0;
+        }
+
+        .subscription {
+
+            display: flex;
+            background-color: $Verypaleblue;
+            border: none;
+            border-radius: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1.5rem 3rem;
+            padding: 20px 25px;
+
+            @include mobile{
+                margin: 1.5rem 1.5rem;
+                padding: 20px 15px;
+            }
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 47px;
+            }
+        }
+
+        .description {
+            padding-left: 20px;
+
+            @include mobile{
+                padding-left: 17px;
+            }
+        }
+
+        h2 {
+            color: $Darkblue;
+            font-size: 15px;
+            padding-bottom: 2px;
+        }
+
+        a {
+
+            color: $Brightblue;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transform: all 0.2s ease;
+
+            &:hover {
+
+                color: lighten($Brightblue, 15%);
+                text-decoration: none;
+            }
+
+            @include mobile{
+                font-size: 13px;
+            }
+        }
+
+        button {
+
+            display: block;
+            border: none;
+            border-radius: 12px;
+            margin: 0 3rem;
+            padding: 1rem;
+            width: 85%;
+            font-size: 12px;
+            cursor: pointer;
+
+            @include mobile{
+                margin: 0 1.5rem;
+                font-size: 14px;
+            }
+        }
+
+        .payment {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            background-color: $Brightblue;
+            color: $Verypaleblue;
+            font-weight: 900;
+            box-shadow: 0px 15px 40px lighten($Darkblue, 50%);
+            position:relative;
+            z-index:999;
+
+
+            &:hover {
+                transform: all 3s ease;
+                background-color: lighten($Brightblue, 15%);
+            }
+
+            @include mobile{
+                margin-top: 1rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .cancel {
+
+            background-color: white;
+            color: $Desaturatedblue;
+            margin-bottom: 1.5rem;
+            transform: all 0.5s ease;
+            font-weight: 700;
+
+            &:hover {
+
+                color: $Darkblue;
+            }
+
+            @include mobile{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+}
